@@ -1,0 +1,9 @@
+<h1>Comics Service</h1>
+
+@for (c of comics; track c) {
+    <div>
+        <h4>{{c.titulo}}</h4>
+        <p>{{c.descripcion}}</p>
+        <img src='{{c.imagen}}' alt="imagen comic" style="width: 180px; height: 280px;" />
+    </div>
+}

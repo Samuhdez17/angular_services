@@ -1,0 +1,13 @@
+<h1>Listado personas</h1>
+
+@for (persona of personas; track persona) {
+    <div style="
+    margin: 30px; padding: 10px; background-color: gainsboro;
+    border-radius: 20px; box-shadow: 0px 0px 10px black;
+    "
+    >
+        <h2>{{persona.Nombre}}</h2>
+        <h4>Edad: {{persona.Edad}}</h4>
+        <h4>Mail: {{persona.Email}}</h4>
+    </div>
+}
