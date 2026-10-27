@@ -1,37 +1,68 @@
-<nav>
-    <ul>
-        <a [routerLink]="['/']" style="padding: 10px;">
-            Home
-        </a>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-        <a [routerLink]="['/comics_service/']" style="padding: 10px;">
-            Comics service
-        </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a [routerLink]="['/']" class="nav-link active" aria-current="page" href="#">
+                        Home
+                    </a>
+                </li>
 
-        <a [routerLink]="['/personas/']" style="padding: 10px;">
-            Personas
-        </a>
+                <li class="nav-item">
+                    <a [routerLink]="['/comics_service/']" class="nav-link" href="#">
+                        comics service
+                    </a>
+                </li>
 
-        <!-- 
+                <li class="nav-item">
+                    <a [routerLink]="['/personas/']" class="nav-link" href="#">
+                        personas
+                    </a>
+                </li>
 
-        <a [routerLink]="['/deportes/']" style="padding: 10px;">
-            Deportes
-        </a>
+                <li class="nav-item">
+                    <a [routerLink]="['/coches/']" class="nav-link" href="#">
+                        coches
+                    </a>
+                </li>
 
-        <a [routerLink]="['/numeros/']" style="padding: 10px;">
-            Suma de numeros
-        </a>
+                <li class="nav-item">
+                    <a [routerLink]="['/plantilla/']" class="nav-link" href="#">
+                        Plantilla
+                    </a>
+                </li>
 
-        <a [routerLink]="['/comic_simple/']" style="padding: 10px;">
-            Comics simple
-        </a>
+                <li class="nav-item">
+                    <a [routerLink]="['/plantilla_multiple/']" class="nav-link" href="#">
+                        Plantilla Multiple
+                    </a>
+                </li>
 
-        <a [routerLink]="['/comic_json/']" style="padding: 10px;">
-            Comics json
-        </a>
-
-        <a [routerLink]="['/comic_excel/']" style="padding: 10px;">
-            Comics excel
-        </a> -->
-    </ul>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
 </nav>

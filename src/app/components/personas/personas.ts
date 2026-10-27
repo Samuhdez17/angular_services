@@ -19,11 +19,32 @@ export class Personas implements OnInit{
 
   }
 
-  async ngOnInit() {
-    this._personasService.getPersonasOservable().subscribe((res) => {
+  async ngOnInit(): Promise<void> { //EL PROMISE VOID SOLO VA CON EL TERCER CASO
+    /*
+    this._personasService.getPersonasOservable().subscribe({
+      next: (res: ) => {
+        this.personas = res
+        this._cdr.detectChanges()
+      }, error: (error) => {
+        console.log(error);
+      }
+    })
+
+    this._personasService.getPersonasPromesa().then((res) => {
       this.personas = res
       this._cdr.detectChanges()
       console.log(this.personas);
+    }). catch((error) => {
+      console.log(error);
     })
+    */
+
+    try {
+      this.personas = await this._personasService.getPeersonasAsync()
+      this._cdr.detectChanges()
+      
+    } catch (error) {
+      console.log(error);
+    }
   }
 }

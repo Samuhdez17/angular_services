@@ -9,9 +9,23 @@ import { Comics } from './components/comics/comics';
 import { provideHttpClient } from '@angular/common/http';
 import { PersonasService } from './services/personas.service';
 import { Personas } from './components/personas/personas';
+import { Coches } from './components/coches/coches';
+import { CochesService } from './services/coches.service';
+import { PlantillaFunciones } from './components/plantilla-funciones/plantilla-funciones';
+import { FuncionesService } from './services/funciones.service';
+import { PlantillaFuncionesMultiple } from './components/plantilla-funciones-multiple/plantilla-funciones-multiple';
 
 @NgModule({
-  declarations: [App, Menu, Home, Comics, Personas],
+  declarations: [
+    App,
+    Menu,
+    Home,
+    Comics,
+    Personas,
+    Coches,
+    PlantillaFunciones,
+    PlantillaFuncionesMultiple,
+  ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [
     provideBrowserGlobalErrorListeners(),
@@ -19,6 +33,8 @@ import { Personas } from './components/personas/personas';
     ComicsService,
     provideHttpClient(),
     PersonasService,
+    CochesService,
+    FuncionesService,
   ],
   bootstrap: [App],
 })

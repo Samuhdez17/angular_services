@@ -4,7 +4,7 @@ import { Comic } from "../models/comic"
 @Injectable()
 export class ComicsService {
     async getComics(): Promise<Array<Comic>> {
-        let path = '/assets/comics.json'
+        let path = './assets/comics.json'
         let respuesta = await fetch(path)
         let data = await respuesta.json()
         let comics: Array<Comic> = []
